@@ -22,3 +22,14 @@ void gogeta(vector<int> &goku, vector<int> &vegeta) // vegito they should've sai
 		goku.push_back(i);
 	vegeta.clear();
 }
+vector<int> sumPairWise(const vector<int> &v1, const vector<int> &v2)
+{
+	vector<int> r;
+	int max = std::max(v1.size(), v2.size());
+	for (int i = 0; i < max; i++)
+	{
+		int sum = (i < v1.size() ? v1[i] : 0) + (i < v2.size() ? v2[i] : 0);
+		r.push_back(sum);
+	}
+	return r;
+}
